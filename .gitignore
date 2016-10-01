@@ -33,3 +33,4 @@
 *.su
 
 starstruck/firmware/*
+starstruck_catapult/bin/*

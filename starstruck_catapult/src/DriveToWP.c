@@ -238,7 +238,7 @@ void driveToWP(DriveToWP *step)
 	}
 
 	//lcdPrint(uart1, 1, "%d", step->iteration->rotation);
-	arcadeDrive((*step).drive, step->iteration->magnitude, step->iteration->rotation);
+	holonomicDrive((*step).drive, step->iteration->magnitude, 0, step->iteration->rotation);
 
 	if(!step->goodDistance)
 			step->timeAtGoodDistance = 0;
@@ -259,5 +259,5 @@ void driveToWP(DriveToWP *step)
 	(*step).isFinished = (*step).goodDistance && (*step).goodRotation &&
 			(millis() - step->timeAtGoodRotation > 500) && (millis() - step->timeAtGoodDistance > 500);
 
-	if((*step).isFinished) arcadeDrive((*step).drive, 0, 0);
+	if((*step).isFinished) holonomicDrive((*step).drive, 0, 0, 0);
 }

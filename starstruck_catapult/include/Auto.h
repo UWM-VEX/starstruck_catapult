@@ -32,14 +32,6 @@ int alliance;
 #define BLUE 1
 
 #define DO_NOTHING 0
-#define WORLDS_1 1
-#define WORLDS_2 2
-#define WORLDS_3 3
-#define WORLDS_4 4
-#define WORLDS_5 5
-#define TURN_TEST 6
-#define WORLDS_FEED 7
-#define WORLDS_6 8
 
 
 int autonomousSelection;
