@@ -53,6 +53,8 @@
 #include "Auto.h"
 
 #include "DriveToWP.h"
+#include "AutoCock.h"
+#include "AutoFire.h"
 
 // Allow usage of this file in C++ programs
 #ifdef __cplusplus
