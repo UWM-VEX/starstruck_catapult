@@ -41,7 +41,22 @@ void operatorControl()
 	{
 		holonomicDrive(robotDrive, OIGetDriveMagnitude(), OIGetDriveDirection(),
 				OIGetDriveRotation());
-		runShovel(robotShovel, OIGetFire());
+
+		if(OIGetCatapultAuto())
+		{
+			robotCatapult->mode = CATAPULT_AUTO;
+		}
+
+		if(abs(OIGetCatapultManual()) > 20 || robotCatapult->mode == CATAPULT_MANUAL)
+		{
+			robotCatapult->mode = CATAPULT_AUTO;
+			runCatapultAtSpeed(robotCatapult, OIGetCatapultManual());
+		}
+		else
+		{
+			runCatapult(robotCatapult, OIGetFire());
+		}
+
 		delay(25);
 	}
 }

@@ -48,9 +48,10 @@
 #include "PantherMotor.h"
 #include "Utilities.h"
 #include "Drive.h"
-#include "Shovel.h"
+#include "Catapult.h"
 #include "Robot.h"
 #include "Auto.h"
+
 #include "DriveToWP.h"
 
 // Allow usage of this file in C++ programs

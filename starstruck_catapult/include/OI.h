@@ -12,5 +12,7 @@ int OIGetDriveMagnitude();
 int OIGetDriveDirection();
 int OIGetDriveRotation();
 int OIGetFire();
+int OIGetCatapultManual();
+int OIGetCatapultAuto();
 
 #endif /* INCLUDE_OI_H_ */
