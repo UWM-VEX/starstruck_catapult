@@ -55,6 +55,7 @@
 #include "DriveToWP.h"
 #include "AutoCock.h"
 #include "AutoFire.h"
+#include "Timeout.h"
 
 // Allow usage of this file in C++ programs
 #ifdef __cplusplus
