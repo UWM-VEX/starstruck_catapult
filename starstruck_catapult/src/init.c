@@ -155,9 +155,6 @@ void lcdModeSelect()
   */
 void initializeIO() {
 	lcdInit(uart1);
-	robotCatapult = initCatapult(initPantherMotor(6, 1), initPantherMotor(2, 1),
-			initPantherMotor(4, 1), initPantherMotor(7, 0), initPantherMotor(3, 0),
-			initPantherMotor(8, 0), 9, encoderInit(11, 12, 0));
 }
 
 /**
@@ -175,7 +172,9 @@ void initialize() {
 					initPantherMotor(9,0), initPantherMotor(10,1),
 					encoderInit(1, 2, 1), encoderInit(3,4,0),
 					encoderInit(5, 6, 1), encoderInit(7,8,0), gyroInit(1, 0));
-
+	robotCatapult = initCatapult(initPantherMotor(6, 1), initPantherMotor(2, 1),
+				initPantherMotor(4, 1), initPantherMotor(7, 0), initPantherMotor(3, 0),
+				initPantherMotor(8, 0), 2);
 	lcdModeSelect();
 
 	//puts("LCD Finished");

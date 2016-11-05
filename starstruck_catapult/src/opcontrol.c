@@ -45,16 +45,11 @@ void operatorControl()
 		if(OIGetCatapultAuto())
 		{
 			robotCatapult->mode = CATAPULT_AUTO;
-		}
-
-		if(abs(OIGetCatapultManual()) > 20 || robotCatapult->mode == CATAPULT_MANUAL)
-		{
-			robotCatapult->mode = CATAPULT_AUTO;
-			runCatapultAtSpeed(robotCatapult, - OIGetCatapultManual());
+			runCatapult(robotCatapult, OIGetFire());
 		}
 		else
 		{
-			runCatapult(robotCatapult, OIGetFire());
+			runCatapultAtSpeed(robotCatapult, - OIGetCatapultManual());
 		}
 
 		delay(25);

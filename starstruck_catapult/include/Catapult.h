@@ -18,14 +18,13 @@ struct Catapult {
 	PantherMotor topRight;
 	PantherMotor frontRight;
 	PantherMotor backRight;
-	int limitSwitch;
-	Encoder encoder;
+	int pot;
 	int mode;
 }typedef Catapult;
 
 Catapult * initCatapult(PantherMotor topLeft, PantherMotor frontLeft, PantherMotor backLeft,
 		PantherMotor topRight, PantherMotor frontRight, PantherMotor backRight,
-		int limitSwitch, Encoder encoder);
+		int limitSwitch);
 int runCatapult(Catapult * catapult, int fire);
 void runCatapultAtSpeed(Catapult * catapult, int speed);
 
