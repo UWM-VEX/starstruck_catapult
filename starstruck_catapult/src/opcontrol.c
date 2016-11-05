@@ -50,7 +50,7 @@ void operatorControl()
 		if(abs(OIGetCatapultManual()) > 20 || robotCatapult->mode == CATAPULT_MANUAL)
 		{
 			robotCatapult->mode = CATAPULT_AUTO;
-			runCatapultAtSpeed(robotCatapult, OIGetCatapultManual());
+			runCatapultAtSpeed(robotCatapult, - OIGetCatapultManual());
 		}
 		else
 		{

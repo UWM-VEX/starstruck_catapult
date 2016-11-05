@@ -155,9 +155,9 @@ void lcdModeSelect()
   */
 void initializeIO() {
 	lcdInit(uart1);
-	robotCatapult = initCatapult(initPantherMotor(6, 0), initPantherMotor(2, 0),
-			initPantherMotor(4, 0), initPantherMotor(7, 1), initPantherMotor(3, 1),
-			initPantherMotor(8, 1), 9, encoderInit(11, 12, 0));
+	robotCatapult = initCatapult(initPantherMotor(6, 1), initPantherMotor(2, 1),
+			initPantherMotor(4, 1), initPantherMotor(7, 0), initPantherMotor(3, 0),
+			initPantherMotor(8, 0), 9, encoderInit(11, 12, 0));
 }
 
 /**

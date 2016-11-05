@@ -29,8 +29,8 @@ Catapult * initCatapult(PantherMotor topLeft, PantherMotor frontLeft, PantherMot
 
 int catapultIsCocked(Catapult * catapult)
 {
-	return digitalRead(catapult->limitSwitch) || encoderGet(catapult->encoder) > 200
-					|| encoderGet(catapult->encoder) < -50;
+	return ( ! digitalRead(catapult->limitSwitch));// || encoderGet(catapult->encoder) > 200
+					//|| encoderGet(catapult->encoder) < -50;
 }
 
 /**
@@ -39,13 +39,13 @@ int catapultIsCocked(Catapult * catapult)
  */
 int runCatapult(Catapult * catapult, int fire)
 {
-	if(digitalRead(catapult->limitSwitch))
+	if( ! digitalRead(catapult->limitSwitch))
 	{
 		encoderReset(catapult->encoder);
 	}
 
 	lcdPrint(uart1, 1, "Enc: %d", encoderGet(catapult->encoder));
-	lcdPrint(uart1, 2, "LS: %d", digitalRead(catapult->limitSwitch));
+	lcdPrint(uart1, 2, "LS: %d", ! digitalRead(catapult->limitSwitch));
 
 	if(fire)
 	{
@@ -56,7 +56,7 @@ int runCatapult(Catapult * catapult, int fire)
 	{
 		if(catapultIsCocked(catapult))
 		{
-			runCatapultAtSpeed(catapult, 0);
+			runCatapultAtSpeed(catapult, 30);
 			return 1;
 		}
 		else
