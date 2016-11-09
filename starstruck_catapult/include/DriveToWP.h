@@ -43,6 +43,7 @@ struct DriveToWP {
 	int rotation;
 	int isFinished;
 	int reachedDistance;
+	int reachedDirection;
 	int reachedRotation;
 	unsigned long timeAchievedGoodLocation;
 	int isFirstTime;
