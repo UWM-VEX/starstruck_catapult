@@ -1,0 +1,1 @@
+java -jar AutoBuilder.jar file.txt //starstruck_catapult

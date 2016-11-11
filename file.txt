@@ -1,0 +1,6 @@
+Mode DO_NOTHING
+End Mode
+Mode MODE_1
+autoLiftLock (robotLiftLock,IN)
+autoTippers (robotAntiTippers,OUT)
+End Mode
