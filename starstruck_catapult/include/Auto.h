@@ -31,8 +31,9 @@ int alliance;
 #define RED 0
 #define BLUE 1
 
+// START OF MODES
 #define DO_NOTHING 0
-
+// END OF MODES
 
 int autonomousSelection;
 

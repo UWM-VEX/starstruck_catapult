@@ -93,6 +93,10 @@ int globalTimeout;
 /**
  * Runs at the start of autonomous. Steps should be initialized here.
  */
+
+// START OF DECLARATIONS
+// END OF DECLARATIONS
+
 void autonomousInit()
 {
 	/**
@@ -101,7 +105,8 @@ void autonomousInit()
 	 * list of the arguments to pass in.
 	 */
 
-	globalTimeout = 6000;
+	// START OF INSTANTIATIONS
+	// END OF INSTANTIATIONS
 
 	autonomousInfo.lastStep = 0;
 	autonomousInfo.step = 1;
@@ -126,6 +131,8 @@ void autonomousPeriodic()
 
 	switch(autonomousSelection)
 	{
+	// START OF EXECUTIONS
+	// END OF EXECUTIONS
 		case(DO_NOTHING):
 			isAuto = 0;
 		break;
